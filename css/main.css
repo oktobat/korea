@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import url(reset.css);
+/* 1번 main_nav를 header의 오른쪽(0px) 상단(35px)에 배치하시오. */
+/* 2번 sub_nav를 main_nav 아래 위치시키고 main_nav>li에 마우스오버시 팝업되도록 하시오. */
+/* 3번 슬라이드 배너를 한장만 보이게 한 후, 텍스트상자(center)를 정중앙에 배치하시오. */
+
+.row { max-width:960px; margin:0 auto }
+
+/* 1번 */
+#header { position:relative }
+.main_nav {  width:570px; position:absolute; right:0; top:35px }
+/* 1번 끝 */
+
+.main_nav > li { float:left; width:33.33%; position:relative }
+.main_nav > li > a { display:block; text-align:center; height:40px; line-height:40px; }
+.main_nav > li:hover > a { background:#009688;
+    color:#fff; }
+
+/* 2번 */
+.sub_nav {  width:100%; background:rgba(255,255,255,0.7); 
+            z-index:999999; position:absolute; top:40px; left:0; display:none }
+.main_nav > li:hover > .sub_nav { display:block }
+/* 2번 끝 */
+
+.sub_nav > li > a { display:block; text-align:center; padding:5px 0; }
+.sub_nav > li:hover > a { background:#009688;
+    color:#fff }
+
+/* 3번 */
+#figure { height:632px;  overflow:hidden; position:relative }
+#figure > .center { 
+    width:324px; background:rgba(255,255,255,0.7); 
+    border-radius:20px;
+    height:108px; position:absolute; top:50%; left:50%;
+    margin-left:-162px; margin-top:-54px;
+    }
+/* 3번 끝 */
+
+.center > .p1 { font-size:32px; font-weight:bold; 
+    text-align:center; margin-top:15px } 
+.center > .p2 { font-size:26px; text-align:center } 
+#figure .left_arr { position:absolute; left:20px; 
+    top:50%; margin-top:-28px }
+#figure .right_arr { position:absolute; right:20px; 
+    top:50%; margin-top:-28px }
+#section { margin-top:34px; margin-bottom:50px }
+.article1 { float:left; width:50% }
+.article2 { float:left; width:50% }
+.article3 { float:left; width:100% }
+#section  h2 { font-size:18px; text-align:center }
+.article1 table { border-top:1px solid #000; width:95%; font-size:12px; margin-top:10px;   }
+.article1 .col1 { width:auto }
+.article1 .col2 { width:15% }
+.article1 th, .article1 td { padding:6px 0;
+}
+.article1 tbody > tr > td:first-child { 
+    padding:6px 20px 6px 10px; 
+    white-space:nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+.article1 tbody > tr:nth-child(odd) { background:lime }
+.article2 div { text-align:center; 
+    margin-top:20px }
+.article2 div .img1 { margin-right:30px }
+.article2 div .img2 { width:30% }
+.article2 p { padding:0px 20px; 
+    font-size:18px; margin-top:20px }
+.article2 p > span { display:block }
+.article2 p > span:nth-child(2) { 
+        text-align:center; margin:14px 0; }
+.article2 p > span:nth-child(3) { 
+        text-align:right; }        
+
+.article3 { margin-top:80px }
+.article3 .icon { float:left; width:33.33%; 
+        text-align:center; }
+.article3 .icon button { background:#009688;     
+    border:none; color:#fff; font-size:25px; 
+    padding:15px 30px; border-radius:15px; margin-top:30px; }
+.article3 .icon button:hover { cursor:pointer }
+
+#fout { width:100%; background:#009686;}
+#footer { background:#009686; color:#fff;
+    padding:25px 20px ; }
+#footer .bmenu { float:left; font-size:18px; 
+    margin-top:20px }
+#footer .bmenu a { padding-right:20px }
+#footer pre { float:right; font-size:12px; line-height:1.5em }
+
+#outlayer { width:100%; height:100%; 
+    background:rgba(0,0,0,0.5); 
+    position:fixed; top:0; left:0; 
+    display:none }
+#inlayer { width:400px; height:300px; background:#fff; 
+    text-align:center; position:absolute; left:50%; 
+    margin-left:-200px; top:50%; margin-top:-150px; 
+    padding-top:50px }
+#inlayer  button { background:#009686; padding:10px 20px;
+    border:none; color:#fff; border-radius:10px; 
+    margin-top:30px }
+#inlayer button:hover { cursor:pointer }
+
+#outlayer:target { display:block }
+
+
+
+
+
